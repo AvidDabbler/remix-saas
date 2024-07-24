@@ -1,5 +1,5 @@
 import type { LoaderFunctionArgs } from '@remix-run/node'
-import { prisma } from '#app/utils/db.server'
+import { prisma } from '~/utils/db.server'
 
 export async function loader({ params }: LoaderFunctionArgs) {
   if (!params.imageId) {

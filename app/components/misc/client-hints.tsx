@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useRevalidator } from '@remix-run/react'
 import { subscribeToSchemeChange } from '@epic-web/client-hints/color-scheme'
-import { hintsUtils } from '#app/utils/hooks/use-hints'
+import { hintsUtils } from '~/utils/hooks/use-hints'
 
 /**
  * Injects an inline script that checks/sets CH Cookies (if not present).

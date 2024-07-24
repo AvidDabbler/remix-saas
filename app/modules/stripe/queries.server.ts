@@ -1,8 +1,8 @@
-import { PLANS } from '#app/modules/stripe/plans'
-import { stripe } from '#app/modules/stripe/stripe.server'
-import { prisma } from '#app/utils/db.server'
-import { getLocaleCurrency, HOST_URL } from '#app/utils/misc.server'
-import { ERRORS } from '#app/utils/constants/errors'
+import { PLANS } from '~/modules/stripe/plans'
+import { stripe } from '~/modules/stripe/stripe.server'
+import { prisma } from '~/utils/db.server'
+import { getLocaleCurrency, HOST_URL } from '~/utils/misc.server'
+import { ERRORS } from '~/utils/constants/errors'
 
 /**
  * Creates a Stripe customer for a user.

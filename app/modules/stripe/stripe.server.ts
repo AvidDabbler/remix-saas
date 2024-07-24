@@ -1,5 +1,5 @@
 import Stripe from 'stripe'
-import { ERRORS } from '#app/utils/constants/errors'
+import { ERRORS } from '~/utils/constants/errors'
 
 if (!process.env.STRIPE_SECRET_KEY) {
   throw new Error(`Stripe - ${ERRORS.ENVS_NOT_INITIALIZED})`)

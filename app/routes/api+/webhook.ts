@@ -1,13 +1,13 @@
 import type { ActionFunctionArgs } from '@remix-run/node'
 import { z } from 'zod'
-import { stripe } from '#app/modules/stripe/stripe.server'
-import { PLANS } from '#app/modules/stripe/plans'
-import { prisma } from '#app/utils/db.server'
+import { stripe } from '~/modules/stripe/stripe.server'
+import { PLANS } from '~/modules/stripe/plans'
+import { prisma } from '~/utils/db.server'
 import {
   sendSubscriptionSuccessEmail,
   sendSubscriptionErrorEmail,
-} from '#app/modules/email/templates/subscription-email'
-import { ERRORS } from '#app/utils/constants/errors'
+} from '~/modules/email/templates/subscription-email'
+import { ERRORS } from '~/utils/constants/errors'
 
 export const ROUTE_PATH = '/api/webhook' as const
 

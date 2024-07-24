@@ -1,4 +1,4 @@
-import { cn } from '#app/utils/misc.js'
+import { cn } from '~/utils/misc.js'
 
 type LogoProps = {
   width?: number

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { ERRORS } from '#app/utils/constants/errors'
+import { ERRORS } from '~/utils/constants/errors'
 
 const ResendSuccessSchema = z.object({
   id: z.string(),

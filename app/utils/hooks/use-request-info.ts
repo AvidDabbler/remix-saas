@@ -1,4 +1,4 @@
-import type { loader as rootLoader } from '#app/root'
+import type { loader as rootLoader } from '~/root'
 import { useRouteLoaderData } from '@remix-run/react'
 
 /**

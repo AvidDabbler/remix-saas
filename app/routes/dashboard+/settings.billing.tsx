@@ -3,22 +3,22 @@ import type {
   LoaderFunctionArgs,
   ActionFunctionArgs,
 } from '@remix-run/node'
-import type { Interval, Plan } from '#app/modules/stripe/plans'
+import type { Interval, Plan } from '~/modules/stripe/plans'
 import { useState } from 'react'
 import { Form, useLoaderData } from '@remix-run/react'
 import { json, redirect } from '@remix-run/node'
-import { requireSessionUser } from '#app/modules/auth/auth.server'
-import { PLANS, PRICING_PLANS, INTERVALS, CURRENCIES } from '#app/modules/stripe/plans'
+import { requireSessionUser } from '~/modules/auth/auth.server'
+import { PLANS, PRICING_PLANS, INTERVALS, CURRENCIES } from '~/modules/stripe/plans'
 import {
   createSubscriptionCheckout,
   createCustomerPortal,
-} from '#app/modules/stripe/queries.server'
-import { prisma } from '#app/utils/db.server'
-import { getLocaleCurrency } from '#app/utils/misc.server'
-import { INTENTS } from '#app/utils/constants/misc'
-import { ROUTE_PATH as LOGIN_PATH } from '#app/routes/auth+/login'
-import { Switch } from '#app/components/ui/switch'
-import { Button } from '#app/components/ui/button'
+} from '~/modules/stripe/queries.server'
+import { prisma } from '~/utils/db.server'
+import { getLocaleCurrency } from '~/utils/misc.server'
+import { INTENTS } from '~/utils/constants/misc'
+import { ROUTE_PATH as LOGIN_PATH } from '~/routes/auth+/login'
+import { Switch } from '~/components/ui/switch'
+import { Button } from '~/components/ui/button'
 
 export const ROUTE_PATH = '/dashboard/settings/billing' as const
 

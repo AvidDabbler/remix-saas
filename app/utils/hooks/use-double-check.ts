@@ -2,7 +2,7 @@
  * Implementation based on github.com/epicweb-dev/epic-stack
  */
 import { useState } from 'react'
-import { callAll } from '#app/utils/misc'
+import { callAll } from '~/utils/misc'
 
 export function useDoubleCheck() {
   const [doubleCheck, setDoubleCheck] = useState(false)

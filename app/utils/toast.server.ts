@@ -4,7 +4,7 @@
  */
 import { redirect, createCookieSessionStorage } from '@remix-run/node'
 import { z } from 'zod'
-import { combineHeaders } from '#app/utils/misc.server'
+import { combineHeaders } from '~/utils/misc.server'
 
 export const TOAST_SESSION_KEY = '_toast'
 export const TOAST_SESSION_FLASH_KEY = '_toast_flash'

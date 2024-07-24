@@ -4,8 +4,8 @@
 import * as cookie from 'cookie'
 import { z } from 'zod'
 import { useFetcher } from '@remix-run/react'
-import { useHints } from '#app/utils/hooks/use-hints'
-import { useRequestInfo } from '#app/utils/hooks/use-request-info'
+import { useHints } from '~/utils/hooks/use-hints'
+import { useRequestInfo } from '~/utils/hooks/use-request-info'
 
 export const ThemeSchema = z.object({
   theme: z.enum(['system', 'light', 'dark']),

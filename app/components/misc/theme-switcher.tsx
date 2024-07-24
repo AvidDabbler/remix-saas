@@ -1,15 +1,15 @@
-import type { Theme, ThemeExtended } from '#app/utils/hooks/use-theme'
+import type { Theme, ThemeExtended } from '~/utils/hooks/use-theme'
 import { useSubmit, useFetcher } from '@remix-run/react'
 import { Sun, Moon, Monitor } from 'lucide-react'
-import { useOptimisticThemeMode } from '#app/utils/hooks/use-theme'
-import { cn } from '#app/utils/misc'
-import { ROUTE_PATH as THEME_PATH } from '#app/routes/resources+/update-theme'
+import { useOptimisticThemeMode } from '~/utils/hooks/use-theme'
+import { cn } from '~/utils/misc'
+import { ROUTE_PATH as THEME_PATH } from '~/routes/resources+/update-theme'
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-} from '#app/components/ui/select'
+} from '~/components/ui/select'
 
 export function ThemeSwitcher({
   userPreference,

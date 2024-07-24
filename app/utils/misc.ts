@@ -1,6 +1,6 @@
 import type { SerializeFrom } from '@remix-run/node'
 import type { ClassValue } from 'clsx'
-import type { loader as rootLoader } from '#app/root'
+import type { loader as rootLoader } from '~/root'
 import { useFormAction, useNavigation, useRouteLoaderData } from '@remix-run/react'
 import { clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'

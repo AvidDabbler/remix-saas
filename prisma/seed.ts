@@ -1,8 +1,8 @@
-import type { Interval } from '#app/modules/stripe/plans'
+import type { Interval } from '~/modules/stripe/plans'
 import { PrismaClient } from '@prisma/client'
-import { prisma } from '#app/utils/db.server'
-import { stripe } from '#app/modules/stripe/stripe.server'
-import { PRICING_PLANS } from '#app/modules/stripe/plans'
+import { prisma } from '~/utils/db.server'
+import { stripe } from '~/modules/stripe/stripe.server'
+import { PRICING_PLANS } from '~/modules/stripe/plans'
 
 const client = new PrismaClient()
 

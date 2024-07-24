@@ -6,23 +6,23 @@ import { z } from 'zod'
 import { getZodConstraint, parseWithZod } from '@conform-to/zod'
 import { getFormProps, getInputProps, useForm } from '@conform-to/react'
 import { Upload } from 'lucide-react'
-import { requireUser } from '#app/modules/auth/auth.server'
-import { getSession, destroySession } from '#app/modules/auth/auth-session.server'
-import { prisma } from '#app/utils/db.server'
-import { createToastHeaders } from '#app/utils/toast.server'
-import { useDoubleCheck } from '#app/utils/hooks/use-double-check'
-import { getUserImgSrc } from '#app/utils/misc'
-import { ERRORS } from '#app/utils/constants/errors'
-import { INTENTS } from '#app/utils/constants/misc'
-import { ROUTE_PATH as HOME_PATH } from '#app/routes/_home+/_layout'
-import { Input } from '#app/components/ui/input'
-import { Button } from '#app/components/ui/button'
+import { requireUser } from '~/modules/auth/auth.server'
+import { getSession, destroySession } from '~/modules/auth/auth-session.server'
+import { prisma } from '~/utils/db.server'
+import { createToastHeaders } from '~/utils/toast.server'
+import { useDoubleCheck } from '~/utils/hooks/use-double-check'
+import { getUserImgSrc } from '~/utils/misc'
+import { ERRORS } from '~/utils/constants/errors'
+import { INTENTS } from '~/utils/constants/misc'
+import { ROUTE_PATH as HOME_PATH } from '~/routes/_home+/_layout'
+import { Input } from '~/components/ui/input'
+import { Button } from '~/components/ui/button'
 import {
   type action as uploadImageAction,
   ROUTE_PATH as UPLOAD_IMAGE_PATH,
   ImageSchema,
-} from '#app/routes/resources+/upload-image'
-import { ROUTE_PATH as RESET_IMAGE_PATH } from '#app/routes/resources+/reset-image'
+} from '~/routes/resources+/upload-image'
+import { ROUTE_PATH as RESET_IMAGE_PATH } from '~/routes/resources+/reset-image'
 
 export const UsernameSchema = z.object({
   username: z

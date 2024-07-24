@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li::marker{
+  display: none;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 80% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+.timetable-page-label {
+  @apply flex gap-3;
+}
+.route-color-swatch-large {
+  @apply px-2 py-1 rounded-md;
+}
+.stop-header,
+.stop-name {
+  @apply w-36;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.link {
+  @apply text-gray-300 font-medium underline hover:text-blue-500;
+}
+
+.simple-transit-hero{
+  background: url("../../public/images/header.jpg") center/cover;
+}
+
+
+html {
+  @apply text-gray-700;
+}
+
+.background-rect {
+  background-image: url("../../public/images/background.svg");
+  background-repeat: space repeat-y;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+}
+
+#hubspot-messages-iframe-container {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  z-index: 1000 !important;
+}
+
+.strikethrough {
+  background: linear-gradient(
+    to left top,
+    transparent 47.75%,
+    currentColor 49.5%,
+    currentColor 50.5%,
+    transparent 52.25%
+  );
+}
+
+
+
+/* pt-serif-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/pt-serif-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* pt-serif-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./fonts/pt-serif-v18-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* pt-serif-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/pt-serif-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* pt-serif-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 700;
+  src: url('./fonts/pt-serif-v18-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+.font-playfair-display, 
+.pt-serif {
+  font-family: 'PT Serif';
+}
+.grecaptcha-badge { visibility: hidden; }
+
+.CookieConsent{
+  @apply bg-stone-100 drop-shadow-lg text-stone-800 !important;
+}

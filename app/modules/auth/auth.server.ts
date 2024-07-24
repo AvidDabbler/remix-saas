@@ -3,13 +3,13 @@ import { redirect } from '@remix-run/node'
 import { Authenticator } from 'remix-auth'
 import { TOTPStrategy } from 'remix-auth-totp'
 import { GitHubStrategy } from 'remix-auth-github'
-import { authSessionStorage } from '#app/modules/auth/auth-session.server'
-import { sendAuthEmail } from '#app/modules/email/templates/auth-email'
-import { prisma } from '#app/utils/db.server'
-import { HOST_URL } from '#app/utils/misc.server'
-import { ERRORS } from '#app/utils/constants/errors'
-import { ROUTE_PATH as LOGOUT_PATH } from '#app/routes/auth+/logout'
-import { ROUTE_PATH as MAGIC_LINK_PATH } from '#app/routes/auth+/magic-link'
+import { authSessionStorage } from '~/modules/auth/auth-session.server'
+import { sendAuthEmail } from '~/modules/email/templates/auth-email'
+import { prisma } from '~/utils/db.server'
+import { HOST_URL } from '~/utils/misc.server'
+import { ERRORS } from '~/utils/constants/errors'
+import { ROUTE_PATH as LOGOUT_PATH } from '~/routes/auth+/logout'
+import { ROUTE_PATH as MAGIC_LINK_PATH } from '~/routes/auth+/magic-link'
 
 export const authenticator = new Authenticator<User>(authSessionStorage)
 
@@ -78,7 +78,7 @@ authenticator.use(
       callbackURL: `${HOST_URL}/auth/github/callback`,
     },
     async ({ profile }) => {
-      const email = profile._json.email || profile.emails[0].value;
+      const email = profile._json.email || profile.emails[0].value
       let user = await prisma.user.findUnique({
         where: { email },
         include: {

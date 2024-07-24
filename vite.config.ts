@@ -3,6 +3,9 @@ import { defineConfig } from 'vite'
 import { flatRoutes } from 'remix-flat-routes'
 import { remixDevTools } from 'remix-development-tools'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import { installGlobals } from '@remix-run/node'
+
+installGlobals()
 
 export default defineConfig({
   build: {
@@ -11,6 +14,11 @@ export default defineConfig({
   plugins: [
     remixDevTools(),
     remix({
+      future: {
+        v3_fetcherPersist: true,
+        v3_relativeSplatPath: true,
+        v3_throwAbortReason: true,
+      },
       serverModuleFormat: 'esm',
       ignoredRouteFiles: ['**/.*'],
       routes: async (defineRoutes) => {

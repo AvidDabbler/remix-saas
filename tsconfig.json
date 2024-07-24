@@ -1,3 +1,39 @@
+// {
+//   "include": [
+//     "**/*.ts",
+//     "**/*.tsx",
+//     "**/.server/**/*.ts",
+//     "**/.server/**/*.tsx",
+//     "**/.client/**/*.ts",
+//     "**/.client/**/*.tsx",
+//     "vite.config.js",
+//     "vitest.config.js",
+//     "app/gtfs/index.ts",
+//     "app/gtfs/gtfs.ts"
+//   ],
+//   "compilerOptions": {
+//     "lib": ["DOM", "DOM.Iterable", "ES2022"],
+//     "types": ["@remix-run/node", "vite/client"],
+//     "isolatedModules": true,
+//     "esModuleInterop": true,
+//     "jsx": "react-jsx",
+//     "module": "NodeNext",
+//     "moduleResolution": "NodeNext",
+//     "resolveJsonModule": true,
+//     "target": "ES2022",
+//     "strict": true,
+//     "allowJs": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "baseUrl": ".",
+//     "paths": {
+//       "~/*": ["./app/*"]
+//     },
+//
+//     // Vite takes care of building everything, not tsc.
+//     "noEmit": true
+//   }
+// }
 {
   "include": [
     "**/*.ts",
@@ -5,28 +41,41 @@
     "**/.server/**/*.ts",
     "**/.server/**/*.tsx",
     "**/.client/**/*.ts",
-    "**/.client/**/*.tsx"
+    "**/.client/**/*.tsx",
+    "vite.config.js",
+    "vitest.config.js",
+    "app/gtfs/index.ts",
+    "app/gtfs/gtfs.ts",
+    "postcss.config.mjs"
   ],
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "types": ["@remix-run/node", "vite/client", "vitest/globals"],
-    "target": "ES2022",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "jsx": "react-jsx",
-    "strict": true,
-    "allowJs": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "noImplicitAny": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "#*": ["./*"]
-    }
+      "~/*": ["./app/*"]
+    },
+    "types": ["@remix-run/node", "vite/client"],
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    // Enable latest features
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+    "allowJs": true,
+
+    // Bundler mode
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+
+    // Best practices
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // Some stricter flags (disabled by default)
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false
   }
 }

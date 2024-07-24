@@ -1,5 +1,5 @@
-import en from '#app/modules/i18n/locales/en'
-import es from '#app/modules/i18n/locales/es'
+import en from '~/modules/i18n/locales/en'
+import es from '~/modules/i18n/locales/es'
 
 const languages = ['es', 'en'] as const
 

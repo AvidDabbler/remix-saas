@@ -1,16 +1,16 @@
 import type { User } from '@prisma/client'
 import { Link, useLocation, useSubmit, useNavigate } from '@remix-run/react'
 import { ChevronUp, ChevronDown, Slash, Check, Settings, LogOut } from 'lucide-react'
-import { PLANS } from '#app/modules/stripe/plans'
-import { useRequestInfo } from '#app/utils/hooks/use-request-info'
-import { userHasRole, getUserImgSrc, cn } from '#app/utils/misc'
-import { ROUTE_PATH as LOGOUT_PATH } from '#app/routes/auth+/logout'
-import { ROUTE_PATH as ADMIN_PATH } from '#app/routes/admin+/_layout'
-import { ROUTE_PATH as DASHBOARD_PATH } from '#app/routes/dashboard+/_layout'
-import { ROUTE_PATH as DASHBOARD_SETTINGS_PATH } from '#app/routes/dashboard+/settings'
-import { ROUTE_PATH as DASHBOARD_SETTINGS_BILLING_PATH } from '#app/routes/dashboard+/settings.billing'
-import { ThemeSwitcher } from '#app/components/misc/theme-switcher'
-import { LanguageSwitcher } from '#app/components/misc/language-switcher'
+import { PLANS } from '~/modules/stripe/plans'
+import { useRequestInfo } from '~/utils/hooks/use-request-info'
+import { userHasRole, getUserImgSrc, cn } from '~/utils/misc'
+import { ROUTE_PATH as LOGOUT_PATH } from '~/routes/auth+/logout'
+import { ROUTE_PATH as ADMIN_PATH } from '~/routes/admin+/_layout'
+import { ROUTE_PATH as DASHBOARD_PATH } from '~/routes/dashboard+/_layout'
+import { ROUTE_PATH as DASHBOARD_SETTINGS_PATH } from '~/routes/dashboard+/settings'
+import { ROUTE_PATH as DASHBOARD_SETTINGS_BILLING_PATH } from '~/routes/dashboard+/settings.billing'
+import { ThemeSwitcher } from '~/components/misc/theme-switcher'
+import { LanguageSwitcher } from '~/components/misc/language-switcher'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,9 +18,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
-} from '#app/components/ui/dropdown-menu'
-import { Button, buttonVariants } from '#app/components/ui/button'
-import { Logo } from '#app/components/logo'
+} from '~/components/ui/dropdown-menu'
+import { Button, buttonVariants } from '~/components/ui/button'
+import { Logo } from '~/components/logo'
 
 /**
  * Required to handle JsonifyObject Typescript mismatch.

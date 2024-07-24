@@ -1,6 +1,6 @@
 import type { LoaderFunctionArgs } from '@remix-run/node'
 import { json } from '@remix-run/node'
-import { requireUserWithRole } from '#app/utils/permissions.server'
+import { requireUserWithRole } from '~/utils/permissions.server'
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const user = await requireUserWithRole(request, 'admin')

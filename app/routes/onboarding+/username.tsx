@@ -13,20 +13,20 @@ import { z } from 'zod'
 import { getZodConstraint, parseWithZod } from '@conform-to/zod'
 import { getFormProps, getInputProps, useForm } from '@conform-to/react'
 import { Loader2 } from 'lucide-react'
-import { requireSessionUser } from '#app/modules/auth/auth.server'
+import { requireSessionUser } from '~/modules/auth/auth.server'
 import {
   createCustomer,
   createFreeSubscription,
-} from '#app/modules/stripe/queries.server'
-import { prisma } from '#app/utils/db.server'
-import { validateCSRF } from '#app/utils/csrf.server'
-import { checkHoneypot } from '#app/utils/honeypot.server'
-import { useIsPending } from '#app/utils/misc'
-import { ERRORS } from '#app/utils/constants/errors'
-import { ROUTE_PATH as LOGIN_PATH } from '#app/routes/auth+/login'
-import { Input } from '#app/components/ui/input'
-import { Button } from '#app/components/ui/button'
-import { ROUTE_PATH as DASHBOARD_PATH } from '#app/routes/dashboard+/_layout'
+} from '~/modules/stripe/queries.server'
+import { prisma } from '~/utils/db.server'
+import { validateCSRF } from '~/utils/csrf.server'
+import { checkHoneypot } from '~/utils/honeypot.server'
+import { useIsPending } from '~/utils/misc'
+import { ERRORS } from '~/utils/constants/errors'
+import { ROUTE_PATH as LOGIN_PATH } from '~/routes/auth+/login'
+import { Input } from '~/components/ui/input'
+import { Button } from '~/components/ui/button'
+import { ROUTE_PATH as DASHBOARD_PATH } from '~/routes/dashboard+/_layout'
 
 export const ROUTE_PATH = '/onboarding/username' as const
 

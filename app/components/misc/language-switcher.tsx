@@ -6,7 +6,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-} from '#app/components/ui/select'
+} from '~/components/ui/select'
 
 export function LanguageSwitcher() {
   const navigate = useNavigate()
